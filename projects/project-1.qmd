@@ -1,24 +1,20 @@
 ---
-title: "Name of the application I have published for Homework 1"
-date: "2024-09-15"
+title: "Simple Air Hockey"
+date: "2025-09-15"
 categories: [GitHub, Vercel, Claude Code]
 ---
 
 ## Overview
 
-This project involved using Claude Code to write the code to needed to deveop an app that ...
+This project involved using Claude Code to write the code to needed to deveop an app that simulated a game of air hockey.
 
-The primary purpose of this app is to:
-
-- ....
-- ....
 
 ## Live Product Demo
 
 <div class="d-flex justify-content-center gap-3 my-4">
   <!-- Open App button -->
   <a class="btn btn-primary d-inline-flex align-items-center"
-     href="https://tetris-game-egc6.vercel.app/"
+     href="https://stratapp.vercel.app/"
      target="_blank" rel="noopener"
      aria-label="Open live app">
     <i class="fa-solid fa-window-restore me-2" aria-hidden="true"></i>
@@ -27,7 +23,7 @@ The primary purpose of this app is to:
 
   <!-- GitHub Source button -->
   <a class="btn btn-outline-dark d-inline-flex align-items-center"
-     href="https://github.com/your-user/your-repo"
+     href="https://github.com/russparry/stratapp"
      target="_blank" rel="noopener"
      aria-label="Open GitHub source">
     <i class="fa-brands fa-github me-2" aria-hidden="true"></i>
@@ -35,14 +31,14 @@ The primary purpose of this app is to:
   </a>
 </div>
 
-<iframe src="https://tetris-game-egc6.vercel.app/"
+<iframe src="https://stratapp.vercel.app/"
         style="width:100%; height:900px; border:none;"
         allowfullscreen>
 </iframe>
 
 ## Technical Details
 
-Framework/Stack: [e.g., React, Quarto, HTML/CSS/JS]
+Framework/Stack: HTML/CSS/JS
 
 Deployment: GitHub Pages + Vercel
 
@@ -51,4 +47,161 @@ Tools Used:
 
 ## Product Requirements Document
 
-Paste in the PRD that you submitted to Claude Code
+## 📝 Project Management Report (PMR)
+
+### 🎮 **Air Hockey Game: Cursor vs AI Opponent**
+
+---
+
+### 1. **Project Overview**
+
+**Goal**:
+Build a simple 2D Air Hockey game playable in the browser where the **player controls a paddle with the mouse cursor**, and the **opponent is controlled by an automated AI**. The puck moves with basic physics, and points are scored by getting the puck into the opponent’s goal.
+
+---
+
+### 2. **Core Features**
+
+| Feature                     | Description                                                     |
+| --------------------------- | --------------------------------------------------------------- |
+| **Canvas-based Game**       | Use HTML5 `<canvas>` for rendering the game elements.           |
+| **Mouse-Controlled Paddle** | Player’s paddle follows the cursor in real-time (X and Y axis). |
+| **Automated AI Paddle**     | Opponent paddle controlled by a basic AI that tracks the puck.  |
+| **Puck Physics**            | The puck moves freely and bounces off walls and paddles.        |
+| **Scoring System**          | Score updates when puck enters a goal zone (top or bottom).     |
+| **Reset After Goal**        | After a goal, puck resets to center and game resumes.           |
+| **Basic UI Elements**       | Show player and AI scores on the screen.                        |
+
+---
+
+### 3. **Technical Requirements**
+
+#### 🎨 Rendering:
+
+* Use **HTML5 Canvas** for 2D rendering.
+* Draw:
+
+  * Game field with borders and a center line.
+  * Puck (circle).
+  * Paddles (circles or rectangles).
+  * Goals (invisible areas at top and bottom of screen).
+
+#### 🖱️ User Input:
+
+* **Mouse cursor** tracks real-time position within the canvas.
+* Player paddle's position is clamped within the **bottom half** of the screen to prevent cheating.
+
+#### 🧠 AI Opponent:
+
+* Simple AI tracks the puck’s X position and adjusts its paddle's X position accordingly.
+* The AI paddle is confined to the **top half** of the screen.
+* AI moves with a max speed to prevent perfect reaction time.
+
+#### ⚙️ Game Physics:
+
+* Puck:
+
+  * Has velocity (X and Y).
+  * Bounces off walls and paddles using simple angle reflection.
+  * Slight friction to prevent infinite movement.
+* Collisions:
+
+  * Detect paddle/puck collisions and reflect appropriately.
+  * Handle edge bouncing with boundaries.
+
+#### 🧮 Scoring:
+
+* When puck crosses:
+
+  * **Top boundary** → Player scores
+  * **Bottom boundary** → AI scores
+* Score display in top corners.
+
+#### ⏱ Game Loop:
+
+* Use `requestAnimationFrame` to update game state and redraw canvas.
+* Maintain 60 FPS if possible.
+
+---
+
+### 4. **Game Logic Flow**
+
+```text
+START GAME
+↓
+INIT canvas, puck, paddles, scores
+↓
+WAIT FOR MOUSE MOVEMENT
+↓
+GAME LOOP:
+    → Update puck position
+    → Move AI paddle based on puck
+    → Handle collisions
+    → Detect goals & update scores
+    → Render everything
+↓
+IF goal scored → reset puck to center
+↓
+LOOP UNTIL page closed
+```
+
+---
+
+### 5. **Assets & Design**
+
+* No external assets required; all game elements are drawn using canvas primitives (rectangles and circles).
+* Optional: Sound effects for collisions or scoring.
+* Colors:
+
+  * Background: Black or dark gray
+  * Paddles: Player (blue), AI (red)
+  * Puck: White or yellow
+  * Center line: White
+  * Goals: Invisible, defined as areas
+
+---
+
+### 6. **Code Structure Suggestion**
+
+Split the implementation into these components:
+
+* `game.js` — Main loop and game state management
+* `paddle.js` — Class for player and AI paddle
+* `puck.js` — Class for puck physics
+* `collision.js` — Handles collision detection and reflection logic
+* `ui.js` — Score display and rendering helpers
+
+---
+
+### 7. **Stretch Goals (Optional Enhancements)**
+
+| Feature            | Description                                             |
+| ------------------ | ------------------------------------------------------- |
+| Power-ups          | Add power-ups like speed boost or paddle size increase. |
+| Sound FX           | Add bounce and score sounds.                            |
+| Difficulty Scaling | AI paddle becomes faster as game progresses.            |
+| Game Timer         | Add countdown timer and declare winner at the end.      |
+| Mobile Support     | Touch controls for phones/tablets.                      |
+
+---
+
+### 8. **Delivery Requirements**
+
+* Single HTML page with embedded or linked JavaScript files.
+* No external libraries (Vanilla JS only).
+* Should work in latest versions of Chrome, Firefox, and Edge.
+* Must support responsive design (resize canvas to window).
+
+---
+
+### 9. **Success Criteria**
+
+* Smooth 60 FPS gameplay.
+* Player can control paddle fluidly with the mouse.
+* AI reacts realistically and is beatable.
+* Puck physics feels natural.
+* Game keeps track of and displays the score.
+
+---
+
+Let me know if you want a **JSON version** of this PMR or a **ready-to-run boilerplate template**, and I can provide that too.
