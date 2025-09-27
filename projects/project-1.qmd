@@ -203,5 +203,3 @@ Split the implementation into these components:
 * Game keeps track of and displays the score.
 
 ---
-
-Let me know if you want a **JSON version** of this PMR or a **ready-to-run boilerplate template**, and I can provide that too.
