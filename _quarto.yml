@@ -4,7 +4,7 @@ project:
 
 website:
   title: ""
-  favicon: images/primary_200.png
+  favicon: images/byu_cougars_1977-1999_a.webp
   navbar:
     background: primary
     left:
