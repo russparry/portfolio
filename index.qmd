@@ -1,5 +1,5 @@
 ---
-title: "Product Management Portfolio of Russell Parry"
+title: "Product Management Portfolio"
 ---
 
 ::: {.hero-banner .text-center}
