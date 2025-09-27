@@ -1,17 +1,17 @@
 ---
-title: "About Me"
+title: "Russell Parry"
 ---
 
 ::: {.hero-banner .text-center}
 
 <img src="images/profile.jpg" alt="add photo to /images" class="rounded-circle mb-3" width="160">
 
-<h1>Your Name</h1>
+<h1>Russell Parry</h1>
 
-<a href="https://linkedin.com/in/your-profile" class="btn btn-outline-primary btn-sm" target="_blank">
+<a href="https://www.linkedin.com/in/russell-parry-586b0b20b" class="btn btn-outline-primary btn-sm" target="_blank">
   <i class="fab fa-linkedin"></i> LinkedIn
 </a>
-<a href="https://github.com/your-username" class="btn btn-outline-primary btn-sm" target="_blank">
+<a href="https://github.com/russparry" class="btn btn-outline-primary btn-sm" target="_blank">
   <i class="fab fa-github"></i> GitHub
 </a>
 
@@ -19,44 +19,42 @@ title: "About Me"
 
 ## Background
 
-Write a compelling narrative about your background, education, and what drives your passion for product management. This is your chance to tell your story and connect with potential employers or collaborators.
+I’m driven by the challenge of turning complex problems into simple, impactful solutions. I’m currently studying Strategic Management at BYU with minors in Computer Science and Statistics, which gives me both the business and technical sides of problem-solving. I analyze insurance pricing data, teach French, and have served in West Africa, where I learned to navigate cultural differences and connect meaningfully with the people I taught. Product management excites me because it’s all about connecting ideas, data, and people to create something meaningful.
 
 ### Education
 
-- **Degree Name**, University Name (Year)
-- **Relevant Coursework**: List key courses related to product management, analytics, or business
-- **Academic Achievements**: Honor societies, relevant projects, or awards
+- **Strategic Management**, Brigham Young University (2026)
+- **Relevant Coursework**: Strategy, Marketing, Economics, Accounting, Data Science, Discrete
+Structures, Probability and Inference, Regression Analysis.
+- **Software Capabilities**: C++, Python, R, SQL, Tableau, VBA, Power BI, S&P Capital IQ, OLAP cubes
 
 ### Experience
 
-#### Job/Internship Title - Company Name
-*Dates*
+#### Product Analyst Intern - WCF Insurance
+*May 2025 - Present*
 
-- Key accomplishment or responsibility
-- Another achievement with quantifiable results
-- Skills or technologies used
+- Conducted market and competitor research by analyzing competitor rate filings, ISO rate
+recommendations, and financial performance data to inform pricing and distribution.
+- Evaluated potential national insurance agency network partnerships by assessing market reach,
+technology capabilities, industry competition, and strategic alignment.
+- Synthesized complex datasets in Power BI using Power Query to support premium pricing strategy
+and developed predictive models (Random Forests, SHAP) to identify key factors influencing
+premiums.
+- Presented intelligence reports and strategic recommendations to senior leadership.
 
-#### Another Position - Company Name
-*Dates*
+#### French Teacher - Missionary Training Center
+*March 2024 - May 2025*
 
-- What you contributed to the organization
-- Projects you worked on
-- Impact you made
+- Trained volunteer representatives in effective time management strategies and interpersonal skills.
+- Prepared volunteer representatives to use these skills in French, helping them to increase their scores
+on elicited imitation assessments by around 2 points.
 
-### Skills & Interests
 
-**Technical Skills**
-- Programming languages (Python, R, SQL)
-- Analytics tools (Tableau, Power BI, Google Analytics)
-- Product management tools (Jira, Confluence, Figma)
-
-**Soft Skills**
-- Communication and presentation
-- Cross-functional collaboration
-- Strategic thinking and problem-solving
 
 **Interests**
-Share what you're passionate about outside of work - this helps humanize your professional brand and can be great conversation starters.
+- Fluent in French scoring a C1 on the CEFR language assessment as of July 2023
+- Eagle Scout, Boy Scouts of America
+- Former college baseball player at Brigham Young
 
 ### What's Next
 
